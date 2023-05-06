@@ -1,0 +1,24 @@
+service: halvors-halvbistro
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.10
+  stage: dev
+  region: eu-west-1
+
+resources:
+ Resources:
+   NewResource:
+     Type: AWS::S3::Bucket
+     Properties:
+       BucketName: halvors-halvbistro-inventory
+
+functions:
+  load_inventory:
+    handler: halvbistro.load_inventory
+    events:
+      - s3:
+          bucket: halvors-halvbistro-inventory
+          event: s3:ObjectCreated:*
+          existing: true

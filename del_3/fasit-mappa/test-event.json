@@ -1,0 +1,37 @@
+{"Records": [
+    {
+        "eventVersion": "2.1", 
+        "eventSource": "aws:s3", 
+        "awsRegion": "eu-west-1", 
+        "eventTime": "2023-05-06T11: 05: 48.074Z", 
+        "eventName": "ObjectCreated:Put", 
+        "userIdentity": {
+            "principalId": "AWS:AIDAVOL74Z6DLZ46TIWLE"
+        },
+        "requestParameters": {
+            "sourceIPAddress": "80.212.81.1"
+        }, 
+        "responseElements": {
+            "x-amz-request-id": "VDZVFT56PAATKG6X",
+             "x-amz-id-2": "ZD7i4MW6RHyPsq1/7nqatoux7tFmZHqdWy4V62+mcnW/sk6GVHnOtdWd4NZOSozZ/ba56VQx6zmxh0gHDaQJLW8nONX+uK5P"
+        }, 
+        "s3": {
+            "s3SchemaVersion": "1.0", 
+            "configurationId": "halvors-halvbistro-dev-load_inventory-68a737133cefb25bff959852b8f04754", 
+            "bucket": {
+                "name": "halvors-halvbistro-inventory", 
+                "ownerIdentity": {
+                    "principalId": "A1P37TO3YMVJSV"
+                }, 
+                "arn": "arn:aws:s3: : :halvors-halvbistro-inventory"
+            }, 
+            "object": {
+                "key": "inventory.json", 
+                "size": 138,
+                 "eTag": "9bccd4b01c1ecded0fe30a82200f1507", 
+                 "sequencer": "006456348BF8053F58"
+            }
+        }
+    }
+]
+}

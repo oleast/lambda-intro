@@ -1,0 +1,12 @@
+[
+  {
+    "type": "vegetable",
+    "name": "carrot",
+    "count": 3
+  },
+  {
+    "type": "dairy",
+    "name": "milk",
+    "count": 1
+  }
+]
