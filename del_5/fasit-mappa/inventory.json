@@ -1,0 +1,17 @@
+[
+  {
+    "type": "vegetable",
+    "name": "carrot",
+    "quantity": 3
+  },
+  {
+    "type": "dairy",
+    "name": "milk",
+    "quantity": 1
+  },
+  {
+    "type": "condiment",
+    "name": "mustard",
+    "quantity": 5
+  }
+]
