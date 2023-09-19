@@ -3,7 +3,7 @@
 ## Case
 La oss prøve å bygge en mer reell applikasjon hvor vi prøver å sy sammen litt forskjellige tjenester. Målet her er ikke å lage det beste designet, men heller å utforske hvordan vi kan løse oppgaver annerledes gjennom enkel tilgang til skytjenester.
 
-La oss si at vi skal lage en tjeneste for å holde styr på lageret til Halvors Bistro, også kjent som HalvBistro. En litt annerledes bistro, siden vi bruker egenutvikla dtasystemer til å holde styr på alt 🤷.
+La oss si at vi skal lage en tjeneste for å holde styr på lageret til Halvors Bistro, også kjent som HalvBistro. En litt annerledes bistro, siden vi bruker egenutvikla datasystemer til å holde styr på alt 🤷.
 
 ## s3 bøtter og invetar-lister
 Først av alt trenger vi et sted å ta imot invetar-lister. Vi har valgt å sette opp s3-bøtter for dette, noe leverandøren har gått med på. De vil "droppe" inn en fil med invetar en gang imellom i bøtta vår. 
@@ -34,7 +34,8 @@ Gjør en `serverless deploy` for å deploye endringene.
 Context er ikke like lett å printe, men er du nysgjerrig kan du se her: https://docs.aws.amazon.com/lambda/latest/dg/python-context.html.
 
 - Test funskjonen din ved å kjøre en test i aws-konsollen.
-- Legg en fil i bøtta di og se hva som skjer. `aws s3 cp <din fil> s3://<bøttenavn>`. Trykk på Monitor -> View Cloudwatch Logs og se på nyeste log-event for runtimen din. 
+- Kopier over `inventory.json` til arbeidsmappa og bruk denne som test-filen din fremover.
+- Legg en fil i bøtta di og se hva som skjer. `aws s3 cp inventory.json s3://<bøttenavn>`. Trykk på Monitor -> View Cloudwatch Logs og se på nyeste log-event for runtimen din. 
 - Ta vare på outputen fra dette i en egen json fil. Kall den test-event.json. Vi skal bruke den seinere.
 - La oss se om vi kan plukke ut bøtte og fil fra eventen. 
 - Lagre to variabler i lambdaen din som henter ut bøtte og filnavn fra eventen. print de.
