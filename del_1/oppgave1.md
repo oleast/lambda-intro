@@ -3,14 +3,14 @@
 ## Mise en place
 Installer:
 - serverless
-- python 3.10
+- python 3.10, 3.11 eller 3.12
 - awscli
 
-For MacOS gjør du dette med: `brew install serverless python3.10 awscli`
+For MacOS gjør du dette med: `brew install serverless python3.11 awscli`
 
 Sjekk at alt funker:
 - `serverless --version`
-- `python3.10 --version`
+- `python3.11 --version`
 - `aws s3 ls` (bør gi "halvors-botte")
 
 ## Vår Hello World og litt python-intro

@@ -9,7 +9,7 @@ Pass på å gjøre følgende endringer til serverless.yml:
 - sett service-navn (noe gjenkjennelig og unikt for deg)
 - sett region til eu-west-1
 - sett stage til dev
-- sett runtime til python3.10
+- sett runtime til python3.11
 - sett handler riktig.
 
 Vi kan deploye med `sls deploy`. 
