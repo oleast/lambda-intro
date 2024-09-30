@@ -1,18 +1,18 @@
 service: halvors-halvbistro
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: python3.10
+  runtime: python3.12
   stage: dev
   region: eu-west-1
 
 resources:
- Resources:
-   NewResource:
-     Type: AWS::S3::Bucket
-     Properties:
-       BucketName: halvors-halvbistro-inventory
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: halvors-halvbistro-inventory
 
 functions:
   load_inventory:

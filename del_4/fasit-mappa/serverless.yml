@@ -1,26 +1,26 @@
 service: halvors-halvbistro
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: python3.10
+  runtime: python3.12
   stage: dev
   region: eu-west-1
 
-# you can add statements to the Lambda function's IAM Role here
+  # you can add statements to the Lambda function's IAM Role here
   iam:
     role:
       statements:
-      - Effect: "Allow"
-        Action:
-          - "s3:getObject"
-        Resource: "arn:aws:s3:::halvors-halvbistro-inventory/*"
-      - Effect: "Allow"
-        Action: 
-          - "dynamodb:PutItem"
-          - "dynamodb:UpdateItem"
-          - "dynamodb:GetItem"
-        Resource: "arn:aws:dynamodb:eu-west-1:374467252102:table/halvors-halvbistro-inventory"
+        - Effect: "Allow"
+          Action:
+            - "s3:getObject"
+          Resource: "arn:aws:s3:::halvors-halvbistro-inventory/*"
+        - Effect: "Allow"
+          Action:
+            - "dynamodb:PutItem"
+            - "dynamodb:UpdateItem"
+            - "dynamodb:GetItem"
+          Resource: "arn:aws:dynamodb:eu-west-1:374467252102:table/halvors-halvbistro-inventory"
 
 resources:
   Resources:
@@ -50,4 +50,3 @@ functions:
           bucket: halvors-halvbistro-inventory
           event: s3:ObjectCreated:*
           existing: true
-      

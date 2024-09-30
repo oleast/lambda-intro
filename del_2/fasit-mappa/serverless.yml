@@ -18,13 +18,13 @@ service: halvor-test
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: python3.10
+  runtime: python3.12
 
-# you can overwrite defaults here
+  # you can overwrite defaults here
   stage: dev
   region: eu-west-1
 
