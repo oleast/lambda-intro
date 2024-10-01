@@ -14,7 +14,7 @@ Sjekk at alt funker:
 
 - `serverless --version`
 - `python3 --version`
-- `aws s3 ls` (bør gi "ole-anders-botte")
+- `aws s3 ls` (bør gi "ole-anders-bucket")
 
 ## Vår Hello World og litt python-intro
 
