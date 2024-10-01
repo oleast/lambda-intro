@@ -14,7 +14,13 @@ Sjekk at alt funker:
 
 - `serverless --version`
 - `python3 --version`
-- `aws s3 ls` (bør gi "ole-anders-bucket")
+- `aws s3 ls`
+
+## Sett opp AWS CLI
+
+- Åpne IAM i AWS konsollen
+- Opprett en ny Access Key, lagre navnet og nøkkelen
+- Kjør `aws configure`
 
 ## Vår Hello World og litt python-intro
 
