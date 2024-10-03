@@ -6,11 +6,11 @@ La oss prøve å bygge en mer reell applikasjon hvor vi prøver å sy sammen lit
 
 La oss si at vi skal lage en tjeneste for å holde styr på lageret til Halvors Bistro, også kjent som HalvBistro. En litt annerledes bistro, siden vi bruker egenutvikla datasystemer til å holde styr på alt 🤷.
 
-## s3 bøtter og invetar-lister
+## s3 bøtter og inventar-lister
 
-Først av alt trenger vi et sted å ta imot invetar-lister. Vi har valgt å sette opp s3-bøtter for dette, noe leverandøren har gått med på. De vil "droppe" inn en fil med invetar en gang imellom i bøtta vår.
+Først av alt trenger vi et sted å ta imot inventar-lister. Vi har valgt å sette opp s3-bøtter for dette, noe leverandøren har gått med på. De vil "droppe" inn en fil med inventar en gang imellom i bøtta vår.
 
-For vår del ønsker vi da å fange opp dette, og å laste inn filen. I første omgang fokuserer vi på å fange opp og lese inn ny filer og oppdateringer av filer. Så finner vi ut hvordan vi lagrer/persisterer dataen seinere.
+For vår del ønsker vi da å fange opp dette, og å laste inn filen. I første omgang fokuserer vi på å fange opp og lese inn nye filer og oppdateringer av filer. Så finner vi ut hvordan vi lagrer/persisterer dataen senere.
 
 Vi kan f.eks. sette opp en lambda til å lytte på s3-eventer.
 
@@ -41,9 +41,9 @@ Context er ikke like lett å printe, men er du nysgjerrig kan du se her: https:/
 - Test funskjonen din ved å kjøre en test i aws-konsollen.
 - Kopier over `inventory.json` til arbeidsmappa og bruk denne som test-filen din fremover.
 - Legg en fil i bøtta di og se hva som skjer. `aws s3 cp inventory.json s3://<bøttenavn>`. Trykk på Monitor -> View Cloudwatch Logs og se på nyeste log-event for runtimen din.
-- Ta vare på outputen fra dette i en egen json fil. Kall den test-event.json. Vi skal bruke den seinere.
+- Ta vare på outputen fra dette i en egen json fil. Kall den test-event.json. **Vi skal bruke den senere!**
 - La oss se om vi kan plukke ut bøtte og fil fra eventen.
-- Lagre to variabler i lambdaen din som henter ut bøtte og filnavn fra eventen. print de.
+- Lagre to variabler i lambdaen din som henter ut bøtte og filnavn fra eventen. Print dem.
 
 ### Lokal testing
 
@@ -66,4 +66,4 @@ if __name__ == '__main__':
     test_load_inventory()
 ```
 
-Nå kan vi kjøre `python test.py` for å teste endringene våre.
+Nå kan vi kjøre `python3 test.py` for å teste endringene våre lokalt.

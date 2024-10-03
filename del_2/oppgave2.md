@@ -16,4 +16,6 @@ Pass på å gjøre følgende endringer til serverless.yml:
 
 Vi kan deploye med `sls deploy`.
 
-La oss ta en titt på hva serverless gjorde for oss i consollen. Finn stacken din i cloudformation.
+La oss ta en titt på hva serverless gjorde for oss i consollen. Test den!
+
+Deretter kan du finne stacken din i cloudformation.

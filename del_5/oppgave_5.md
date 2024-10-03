@@ -2,7 +2,7 @@
 
 ## SQS
 
-Nå har vi en lambda for å oppdatere invetar-lista vår, vi har en s3 bøtte hvor potensielt ekserne kan dumpe oppdateringer til inventory-lista vår. Hvordan skalerer denne løsningen så langt?
+Nå har vi en lambda for å oppdatere inventar-lista vår, vi har en s3 bøtte hvor potensielt ekserne kan dumpe oppdateringer til inventory-lista vår. Hvordan skalerer denne løsningen så langt?
 
 la oss utvide funksjonaliteten litt. Først, la oss lage en melding for hver oppdatering vi får inn. Vi kan bruke SQS til dette.
 

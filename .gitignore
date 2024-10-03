@@ -2,8 +2,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.DS_store
 
-arbeidsmappa
+arbeidsmappa/*
+!arbeidsmappa/.gitkeep
+arbeidsmappe/*
 
 # C extensions
 *.so
