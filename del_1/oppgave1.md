@@ -8,7 +8,7 @@ Installer:
 - python 3.10, 3.11 eller 3.12
 - awscli
 
-For MacOS gjør du dette med: `brew install serverless python3.12 awscli`
+For MacOS gjør du dette med: `brew install serverless python3 awscli`
 
 Sjekk at alt funker:
 
@@ -63,6 +63,7 @@ Vi tar inn to argumenter som alle funksjoner som kalles av lambda får. Deretter
 Sånn! Nå er vi klare til å laste opp koden vår.
 
 - Zip hello.py fila di (`zip hello-zip hello.py` funker f.eks.).
+- Last zipfilen opp til lambdaen din i AWS
 - Vi må endre Handler under runtime settings, siden denne stod til boilerplate-verdier. Strukturen her er `<filnavn>.<funksjonsnavn>`.
 - Trykk på test og lag en random test-event. Det er likegyldig hva som står i input inntil videre.
 - Test i vei!
