@@ -40,8 +40,9 @@ Context er ikke like lett å printe, men er du nysgjerrig kan du se her: https:/
 
 - Test funskjonen din ved å kjøre en test i aws-konsollen.
 - Kopier over `inventory.json` til arbeidsmappa og bruk denne som test-filen din fremover.
-- Legg en fil i bøtta di og se hva som skjer. `aws s3 cp inventory.json s3://<bøttenavn>`. Trykk på Monitor -> View Cloudwatch Logs og se på nyeste log-event for runtimen din.
-- Ta vare på outputen fra dette i en egen json fil. Kall den test-event.json. **Vi skal bruke den senere!**
+- Legg en fil i bøtta di og se hva som skjer. `aws s3 cp inventory.json s3://<bøttenavn>`. Trykk på Monitor -> View Cloudwatch Logs, her kan du se alle loggene fra funksjonen din! I funksjonen printer vi "event", så eventet som trigget funksjonen
+  og se på den nyeste outputen. Her skal alle loggene fra funksjonen din ligge! Når vi printer "event" i funksjonen vår vil eventet som trigget lambdaen ligge som en egen linje.
+- Ta vare på dette eventet som en egen .json fil. Kall den test-event.json. **Vi skal bruke den senere!**
 - La oss se om vi kan plukke ut bøtte og fil fra eventen.
 - Lagre to variabler i lambdaen din som henter ut bøtte og filnavn fra eventen. Print dem.
 
