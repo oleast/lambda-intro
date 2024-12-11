@@ -19,8 +19,14 @@ Sjekk at alt funker:
 ## Sett opp AWS CLI
 
 - Åpne IAM i AWS konsollen
-- Opprett en ny Access Key, lagre navnet og nøkkelen
-- Kjør `aws configure`
+
+- Opprett en ny Access Key i konsollen i nettleseren, lagre navnet og nøkkelen
+
+- Kjør `aws configure`. Her vil du bli spurt om å legge inn
+  - `AWS Access Key ID`: Denne henter du fra forrige steg
+  - `AWS Secret Access Key`: Denne henter du også fra forrige steg
+  - `Default region name`: Her kan du skrive inn `eu-west-1`
+  - `Default output format`: Denne kan du la være `json`
 
 ## Vår Hello World og litt python-intro
 
